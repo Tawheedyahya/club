@@ -1,0 +1,33 @@
+button {
+    border-radius: 20px;
+    font-weight: 600;
+}
+a {
+    text-decoration: none;
+}
+form {
+    padding: 60px 30px;
+    border-radius: 20px;
+}
+h1, label {
+    background: linear-gradient(to right, black, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 24px;
+}
+.error {
+    border: 2px solid red;
+    animation: blink-border 1s infinite;
+}
+
+@keyframes blink-border {
+    0% {
+        border-color: red;
+    }
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: red;
+    }
+}
