@@ -1,20 +1,26 @@
 <?php
 if(isset($_POST['submit'])){
+    $conn=new mysqli("localhost","root","","club");
     $t_ann=$_POST['t_ann'];
     $c_time=time();
-    $e_time=$c_time+10;
+    $e_time=$c_time+8600;
     $file_name=$_FILES['g_img']['name'];
     $tmp_name=$_FILES['g_img']['tmp_name'];
+    $found=false;
    
     if(!is_dir('a_img')){
         mkdir('a_img',0777,true);
     }
     if(move_uploaded_file($tmp_name,'a_img/'.$file_name)){
-        $conn=new mysqli("localhost","root","","club");
+        
        $sql="INSERT into announcement(a_img,t_ann,e_time)values('$file_name','$t_ann','$e_time')";
        mysqli_query($conn,$sql);
+       $found=true;
     }
-
+    if(!$found){
+        $sql="INSERT into announcement(t_ann,e_time)values('$t_ann','$e_time')";
+        mysqli_query($conn,$sql);
+    }
 }
 
 ?>
