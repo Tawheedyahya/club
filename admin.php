@@ -1,5 +1,9 @@
 <!--change to php file-->
-
+<?php
+if(!isset($_COOKIE['nam']) && !isset($_COOKIE['pass'])){
+    header("location:login.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +54,7 @@ a{
             <h1 class="p-5 bg"><a href="ta.php" class="text-decoration-none">take attendance</a></h1>
         </div>
         <div class="row ">
-            <h1 class="p-5"><a href="#" class="text-decoration-none">give announcements</a></h1>
+            <h1 class="p-5"><a href="giveannouncement.php" class="text-decoration-none">give announcements</a></h1>
         </div>
         <div class="row">
             <h1 class="p-5"><a href="view.php" class="text-decoration-none">view student details</a></h1>

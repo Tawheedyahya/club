@@ -23,8 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 if ($_SESSION['nam'] == trim($row['na']) && $_SESSION['pass'] == trim( $row['pa'])) {
                     $nam=$_SESSION['nam'];
                     $pass=$_SESSION['pass'];
-                    setcookie('nam',$nam,time()+(86000),"/");
-                    setcookie('pass',$pass,time()+(86000),"/");
+                    setcookie('nam',$nam,time()+(10*1*1*1),"/");
+                    setcookie('pass',$pass,time()+(10*1*1*1),"/");
                     header("location:admin.php");
                     exit();
                 }
@@ -94,6 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     </style>
 </head>
+<body>
     <?php include 'header.php';?>
     <div class="container">
         <div class="for">

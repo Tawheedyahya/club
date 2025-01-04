@@ -8,6 +8,7 @@ foreach($result as $result){
     if($result['chek']=='present'){
         $sql1="UPDATE attend set chek='absent' where id='$id' and t_ime='$t_ime'";
         mysqli_query($conn,$sql1);
+        $conn->close();
         header("location:viewattendance.php");
         exit();
     }

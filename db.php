@@ -1,5 +1,5 @@
 
-<?
+<?php
 /* CREATE TABLE LOGI(
 ID INT,
 NA VARCHAR(20),
@@ -22,4 +22,8 @@ T_IME TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 FOREIGN KEY(ID) REFERENCES STUDENTS(ID)
 );
 */
+$conn=new mysqli("localhost","root","","club");
+$sql = "ALTER table announcement add column e_time varchar(100)";
+
+mysqli_query($conn,$sql);
 ?>

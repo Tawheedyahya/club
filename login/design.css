@@ -17,7 +17,7 @@ h1, label {
 }
 .error {
     border: 2px solid red;
-    animation: blink-border 1s ;
+    animation: blink-border 1s infinite;
 }
 
 @keyframes blink-border {

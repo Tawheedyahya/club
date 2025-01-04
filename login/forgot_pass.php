@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     if(!$em){
         echo "<script>
         window.onload=function(){
-        let err=document.getElementById('kk');
+        let err=document.querySelector('form');
         err.classList.add('error');}
         </script>";
     }    }
@@ -51,7 +51,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                     <label for="email">email</label>
                 </div>
                 <div class="col-8">
-                    <input type="text" name="email" id="kk" class="form-control">
+                    <input type="text" name="email" id="" class="form-control">
                 </div>
             </div>
             <div class="row mt-4">
